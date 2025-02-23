@@ -1,1 +1,138 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
 /* You can add global styles to this file, and also import other style files */
+$primary-color: #2A5B96;
+$secondary-color: #3B8292;
+$ternary-color: #F5C09E;
+$border-color: #101324;
+$hover-primary: #000000;
+$hover-secondary: #ffffff;
+
+// Optional: Define other theme colors
+$background-color: #FAFCFC;
+$text-color: #101324;
+
+// Use CSS variables (optional)
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --border-color: #{$border-color};
+}
+* {
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.container {
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
+}
+
+.title, .description, .sub-title {
+  padding: 5px 0;
+}
+
+button {
+  margin: 10px 0px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 10px 20px;
+}
+
+button.primary {
+  background-color: $text-color;
+  color: $background-color;
+  border: 2px solid $border-color;
+}
+
+button.secondary {
+  background-color: $background-color;
+  color: $text-color;
+  margin-left: 10px;
+  border: 2px solid $border-color;
+}
+
+button.ternary {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+button.primary:hover {
+  background-color: $hover-primary;
+}
+
+button.secondary:hover {
+  background-color: $hover-secondary;
+}
+
+button.ternary:hover {
+  text-decoration: underline;
+}
+
+img.icon {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+img.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+img.logo {
+  width: 100px;
+  height: auto;
+  margin: 10px;
+  cursor: pointer;
+
+}
+
+li {
+  cursor: pointer;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+input {
+  height: 40px;
+  background: none;
+  width: 60%;
+  outline: none;
+  border: 2px solid;
+  caret-color: $secondary-color;
+  color: $secondary-color;
+  padding-left: 10px;
+}
+
+input::placeholder {
+  color: #CCC;
+}
+
+.error {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  justify-content: flex-start;
+  color: red;
+  background-color: transparent;
+
+  @media (max-width: 425px) {
+    font-size: 12px;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

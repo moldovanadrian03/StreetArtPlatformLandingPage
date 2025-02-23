@@ -1,0 +1,13 @@
+<section class="container">
+  <div class="info-container">
+    <h1 class="title">Aboneaza-te la newsletter</h1>
+    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, repellat</p>
+    <div class="form-container">
+      <form action="#" [formGroup]="subscribeToNewsLetterForm" (ngSubmit)="onSubmit()">
+        <input type="text" formControlName="email" placeholder="Introduceti adresa de email"/>
+        <button type="submit" class="secondary">Aboneaza-te</button>
+      </form>
+      <p class="error" *ngIf="subscribeToNewsLetterForm.get('email')?.hasError('email')">Introdu o adresa valida de email</p>
+    </div>
+  </div>
+</section>
