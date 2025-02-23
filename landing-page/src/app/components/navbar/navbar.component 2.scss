@@ -1,0 +1,40 @@
+#navbar-container {
+	width: 100%;
+	height: auto;
+  position: fixed;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr 5fr;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+	.navbar-row1 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+	}
+
+	.navbar-row2 {
+		ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			list-style: none;
+
+			li {
+				cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+			}
+		}
+	}
+
+
+}

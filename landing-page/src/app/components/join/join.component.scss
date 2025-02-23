@@ -1,0 +1,29 @@
+.container {
+  height: 50vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+
+  @media(max-width: 768px) {
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-container {
+    grid-column: 1;
+    padding: 10px 30px;
+
+    @media(max-width: 768px) {
+      padding: 10px 10px;
+    }
+
+    .buttons-container {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+}

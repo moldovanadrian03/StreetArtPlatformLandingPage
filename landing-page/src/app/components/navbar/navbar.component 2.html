@@ -1,0 +1,57 @@
+<div id="navbar-container">
+  <section class="navbar-row1">
+    <button
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="toggleSidenav()"
+      class="sidenav-button"
+      *ngIf="isMobile()"
+    >
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <img
+      class="logo"
+      src="assets/horizontal_logo.jpg"
+      alt="logo"
+      (click)="scrollTo('about')"
+    />
+  </section>
+
+  <section class="navbar-row2">
+    <ul>
+      <li (click)="scrollTo('peoples-opinion')">
+        Parerea oamenilor
+      </li>
+      <li (click)="scrollTo('features')">
+        Caracteristici
+      </li>
+      <li (click)="scrollTo('map')">
+        Harta
+      </li>
+      <li (click)="scrollTo('community')">
+        Aboneaza-te
+      </li>
+    </ul>
+  </section>
+
+
+  <!-- @if(isSidenavOpened && isMobile()) {
+  <div class="backdrop" (click)="toggleSidenav()"></div>
+  <section class="sidenav-container">
+    <ul>
+      <li (click)="scrollTo('peoples-opinion')">
+        Parerea oamenilor
+      </li>
+      <li (click)="scrollTo('features')">
+        Caracteristici
+      </li>
+      <li (click)="scrollTo('map')">
+        Harta
+      </li>
+      <li (click)="scrollTo('community')">
+        Aboneaza-te
+      </li>
+    </ul>
+  </section>
+} -->
+</div>

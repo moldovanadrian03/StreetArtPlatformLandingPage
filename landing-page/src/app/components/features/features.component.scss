@@ -1,0 +1,110 @@
+.container {
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    height: auto;
+  }
+
+  .info-container {
+    height: 20%;
+    grid-row: 1;
+    padding: 10px 30px;
+
+    text-align: center;
+    @media (max-width: 768px) {
+      padding: 10px 10px;
+    }
+  }
+
+  .cards-container {
+    height: 80%;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 10px 30px;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .small-cards-container {
+      grid-column: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-right: 10px;
+
+      @media (max-width: 768px) {
+        margin-right: 0px;
+      }
+      @media (max-width: 425px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .small-card-1, .small-card-2 {
+        border: 2px solid var(--border-color);
+        padding: 10px;
+      }
+      .small-card-1 {
+        margin-right: 10px;
+
+        @media (max-width: 425px) {
+          margin-right: 0px;
+        }
+      }
+      .small-card-2 {
+        margin-left: 10px;
+
+        @media (max-width: 425px) {
+          margin-left: 0px;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .big-card-container {
+      grid-column: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      border: 2px solid var(--border-color);
+      margin-left: 10px;
+
+      .image-container {
+        grid-column: 1;
+        display: flex;
+        align-items: center;
+      }
+
+      .card-info-container {
+        grid-column: 2;
+        padding: 10px;
+      }
+
+      @media (max-width: 768px) {
+        margin-left: 0px;
+        margin-top: 10px;
+      }
+      @media (max-width: 425px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+button {
+  border: none;
+}

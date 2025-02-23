@@ -1,0 +1,52 @@
+<section class="container">
+  <div class="header">
+    <div class="info-container">
+      <div class="info">
+        <img class="logo" src="assets/square_logo.jpg">
+        <p>Aboneaza-te la newsletter</p>
+        <div class="form-container">
+          <form action="#" [formGroup]="subscribeToNewsLetterForm" (ngSubmit)="onSubmit()">
+            <input type="text" formControlName="email" placeholder="Introduceti adresa de email"/>
+            <button type="submit" class="secondary">Aboneaza-te</button>
+          </form>
+          <p class="error" *ngIf="subscribeToNewsLetterForm.get('email')?.hasError('email')">Introdu o adresa valida de email</p>
+          <p class="terms">Odata cu abonarea, va dati acordul pentru prelucrarea datelor personale</p>
+        </div>
+      </div>
+    </div>
+    <div class="links-container">
+      <h3>Linkuri rapide</h3>
+      <ul>
+        <li (click)="scrollTo('about')">
+          Despre noi
+        </li>
+        <li (click)="scrollTo('features')">
+          Caracteristici
+        </li>
+        <li (click)="scrollTo('map')">
+          Harta
+        </li>
+        <li (click)="scrollTo('community')">
+          Comunitate
+        </li>
+      </ul>
+    </div>
+    <div class="social-media-container">
+      <h3>Social media</h3>
+      <ul>
+        <li>
+          <img src="assets/facebook.png" alt="facebook">
+        </li>
+        <li>
+          <img src="assets/instagram.png" alt="instagram">
+        </li>
+        <li>
+          <img src="assets/twitter.png" alt="twitter">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright-container">
+    <p>Copyright 2025 Platforma Artelor Stradale/꩜𝟹Vision</p>
+  </div>
+</section>
