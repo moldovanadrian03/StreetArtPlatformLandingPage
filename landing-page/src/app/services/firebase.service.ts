@@ -3,7 +3,6 @@ import { FirebaseApp, initializeApp } from 'firebase/app';
 import { environment } from '../../environments/environment';
 import { equalTo, get, getDatabase, orderByChild, push, ref, set } from 'firebase/database';
 import { query } from 'firebase/database';
-import { equal } from 'assert';
 @Injectable({
   providedIn: 'root'
 })
