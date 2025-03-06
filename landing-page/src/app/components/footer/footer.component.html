@@ -3,14 +3,14 @@
     <div class="info-container">
       <div class="info">
         <img class="logo" src="assets/square_logo.jpg">
-        <p>Aboneaza-te la newsletter</p>
+        <p>Abonează-te la newsletter</p>
         <div class="form-container">
           <form action="#" [formGroup]="subscribeToNewsLetterForm" (ngSubmit)="onSubmit()">
-            <input type="text" formControlName="email" placeholder="Introduceti adresa de email"/>
-            <button type="submit" class="secondary">Aboneaza-te</button>
+            <input type="text" formControlName="email" placeholder="Introduceți adresa de email"/>
+            <button type="submit" class="secondary">Abonează-te</button>
           </form>
-          <p class="error" *ngIf="subscribeToNewsLetterForm.get('email')?.hasError('email')">Introdu o adresa valida de email</p>
-          <p class="terms">Odata cu abonarea, va dati acordul pentru prelucrarea datelor personale</p>
+          <p class="error" *ngIf="subscribeToNewsLetterForm.get('email')?.hasError('email')">Introdu o adresă validă de email</p>
+          <p class="terms">Odată cu abonarea, vă dați acordul pentru prelucrarea datelor personale.</p>
         </div>
       </div>
     </div>
@@ -24,7 +24,7 @@
           Caracteristici
         </li>
         <li (click)="scrollTo('map')">
-          Harta
+          Hartă
         </li>
         <li (click)="scrollTo('community')">
           Comunitate

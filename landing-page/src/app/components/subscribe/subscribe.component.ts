@@ -15,7 +15,7 @@ export class SubscribeComponent {
   subscriber: string | null = null;
 
   subscribeToNewsLetterForm = new FormGroup({
-    email: new FormControl(' ', [Validators.required, Validators.email])
+    email: new FormControl('', [Validators.required, Validators.email])
   });
 
   onSubmit(): void {

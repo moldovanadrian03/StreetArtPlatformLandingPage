@@ -15,7 +15,7 @@ export class FooterComponent {
   subscriber: string | null = null;
 
   subscribeToNewsLetterForm: FormGroup = new FormGroup({
-    email: new FormControl(' ', [Validators.required, Validators.email])
+    email: new FormControl('', [Validators.required, Validators.email])
   });
 
   onSubmit(): void {
